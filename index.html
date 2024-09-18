@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AssessAI - Enhance Learning</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script> <!-- Link to the JS file -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+  <!-- Main Landing Page -->
+  <header>
+    <div class="navbar">
+      <div class="logo">Assess<span class="highlight">AI</span></div>
+      <nav>
+        <ul>
+          <li><a href="#">Demos</a></li>
+          <li><a href="#">Pages</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="signin-btn" id="open-login-modal">Sign in</button>
+    </div>
+  </header>
+
+  <section class="hero-section">
+    <div class="hero-text">
+      <h1>Ready to Enhance Your Learning Experience?</h1>
+      <p>With our AI tools, you can reach your academic goals faster. Stay ahead with AI-powered study plans, real-time feedback, and expert recommendations tailored to your needs.</p>
+      <button class="cta-button" id="get-started-btn">Get started Now</button>
+    </div>
+    <div class="hero-image">
+      <img src="image1.png" alt="Hero Illustration">
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services">
+    <h2>Our Services</h2>
+    <p class="service-desc">We provide great services for our customers based on needs</p>
+    <div class="service-container">
+      <div class="service-box" style="background-color: #3dbf87;">
+        <img src="image2.png" alt="AI Powered Study Plans">
+        <h3>AI-Powered Study Plans</h3>
+        <p>With lots of unique blocks, you can easily build a page without coding. Build your next landing page.</p>
+        <a href="#">Learn more</a>
+      </div>
+      <div class="service-box" style="background-color: #456de9;">
+        <img src="image3.png" alt="Real-Time Feedback">
+        <h3>Real-Time Feedback</h3>
+        <p>With lots of unique blocks, you can easily build a page without coding. Build your next landing page.</p>
+        <a href="#">Learn more</a>
+      </div>
+      <div class="service-box" style="background-color: #f24c4c;">
+        <img src="image4.png" alt="Code Explanations">
+        <h3>Code Explanations</h3>
+        <p>With lots of unique blocks, you can easily build a page without coding. Build your next landing page.</p>
+        <a href="#">Learn more</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Login Modal -->
+  <div id="login-modal" class="modal">
+    <div class="modal-content">
+      <button id="close-login-modal" class="close-btn">✖</button>
+      <h2>Login to Account</h2>
+      <p>Please enter your email and password to continue</p>
+      <form>
+        <div class="input-group">
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" placeholder="example@gmail.com">
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="********">
+          <a href="#" class="forgot-password">Forgot Password?</a>
+        </div>
+
+        
+
+        <button type="submit" class="auth-button">Sign In</button>
+      </form>
+
+      <div class="auth-footer">
+        <p>Don't have an account? <a href="#" id="open-signup-modal">Create Account</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sign-up Modal -->
+  <div id="signup-modal" class="modal">
+    <div class="modal-content">
+      <button id="close-signup-modal" class="close-btn">✖</button>
+      <h2>Create an Account</h2>
+      <p>Please enter your details to sign up</p>
+      <form>
+        <div class="input-group">
+          <label for="signup-email">Email Address:</label>
+          <input type="email" id="signup-email" name="signup-email" placeholder="example@gmail.com">
+        </div>
+
+        <div class="input-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" placeholder="Username">
+        </div>
+
+        <div class="input-group">
+          <label for="signup-password">Password:</label>
+          <input type="password" id="signup-password" name="signup-password" placeholder="********">
+        </div>
+
+       
+
+        <button type="submit" class="auth-button">Sign Up</button>
+      </form>
+
+      <div class="auth-footer">
+        <p>Already have an account? <a href="#" id="back-to-login">Login</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Assessments Page (Hidden initially) -->
+  <div id="assessments-page" class="hidden-page">
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        
+        <nav>
+          <ul>
+            <li><a href="#" id="dashboard-link" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+            <li><a href="#"><i class="fas fa-clipboard"></i> Assessments</a></li>
+            <li><a href="#"><i class="fas fa-bookmark"></i> Bookmarks</a></li>
+            <li><a href="#"><i class="fas fa-users"></i> Community</a></li>
+          </ul>
+        </nav>
+        <div class="sidebar-footer">
+          <a href="#"><i class="fas fa-cog"></i> Settings</a>
+          <a href="#"><i class="fas fa-power-off"></i> Logout</a>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <!-- Top Bar -->
+        <div class="top-bar">
+          <input type="text" placeholder="Search..." class="search-box">
+          <div class="user-settings">
+            
+            <img src="./mrha.jpeg" alt="User Avatar" class="user-avatar">
+            <span class="user-name">Moni Roy</span>
+            
+          </div>
+        </div>
+
+        <!-- Assessment Form -->
+        <div class="assessment-container">
+          <h1>Tell Us More About You!</h1>
+          <form>
+            <div class="question-row">
+              <div class="question">
+                <label for="expertise">Q1: What is your current level of expertise in the field you want to explore?</label>
+                <select id="expertise">
+                  <option>Beginner</option>
+                  <option>Intermediate</option>
+                  <option>Expert</option>
+                </select>
+              </div>
+              <div class="question">
+                <label for="learning-style">Q4: How do you prefer to learn new skills?</label>
+                <select id="learning-style">
+                  <option>Video Tutorials</option>
+                  <option>Reading Articles</option>
+                  <option>Interactive Exercises</option>
+                </select>
+              </div>
+              <div class="question">
+                <label for="difficulty">Q7: How challenging do you want the courses to be?</label>
+                <select id="difficulty">
+                  <option>Easy</option>
+                  <option>Moderate</option>
+                  <option>Challenging</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="question-row">
+              <div class="question">
+                <label for="achievement">Q2: What are you hoping to achieve?</label>
+                <select id="achievement">
+                  <option>Develop a new skill</option>
+                  <option>Advance in current role</option>
+                  <option>Change careers</option>
+                </select>
+              </div>
+              <div class="question">
+                <label for="time-dedication">Q5: How much time can you dedicate each week?</label>
+                <select id="time-dedication">
+                  <option>Less than 2 hours</option>
+                  <option>2-5 hours</option>
+                  <option>More than 5 hours</option>
+                </select>
+              </div>
+              <div class="question">
+                <label for="language">Q8: What is your preferred language for course materials?</label>
+                <select id="language">
+                  <option>English</option>
+                  <option>Hindi</option>
+                  <option>Local Langauge</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="question-row">
+              <div class="question">
+                <label for="interest">Q3: What are you most interested in learning about?</label>
+                <select id="interest">
+                  <option>Technology</option>
+                  <option>Business</option>
+                  <option>Science</option>
+                </select>
+              </div>
+              <div class="question">
+                <label for="career-goal">Q6: Which of these best describes your long-term career goals?</label>
+                <select id="career-goal">
+                  <option>Entering a new field</option>
+                  <option>Growing in current field</option>
+                  <option>Switching industries</option>
+                </select>
+              </div>
+              <div class="question">
+                <label for="accommodations">Q9: Do you need any specific accommodations to enhance your learning experience?</label>
+                <input type="text" id="accommodations" placeholder="Please Specify">
+              </div>
+            </div>
+
+            <div class="submit-section">
+              <button type="submit" class="submit-btn">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Dashboard Page (Hidden initially) -->
+<!-- Dashboard Page (Hidden initially) -->
+<div id="dashboard-page" class="hidden-page">
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2 class="logo">Assess<span class="highlight">AI</span></h2>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-clipboard"></i> Assessments</a></li>
+                    <li><a href="#"><i class="fas fa-bookmark"></i> Bookmarks</a></li>
+                    <li><a href="#"><i class="fas fa-users"></i> Community</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                <a href="#"><i class="fas fa-power-off"></i> Logout</a>
+            </div>
+        </div>
+
+        <!-- Main Dashboard Content -->
+        <div class="main-content">
+            <h1>Hi Rahul</h1>
+            <p>Welcome back to Rhombus CRM dashboard</p>
+
+            <div class="dashboard-container">
+                <!-- Quick Action Cards -->
+                <div class="dashboard-card">
+                    <div class="card-icon">
+                        <img src="./image5.png" alt="Take a Quiz Icon">
+                    </div>
+                    <h3>Take a Quiz</h3>
+                    <p>Personalized Questions</p>
+                    <div class="progress-bar" style="width: 67%; background-color: #4c8ffb;"></div>
+                    <p class="progress-percentage">67%</p>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="card-icon">
+                        <img src="./image8.png" alt="Plagiarism Icon">
+                    </div>
+                    <h3>Plagiarism</h3>
+                    <p>Check for duplicacy</p>
+                    <div class="progress-bar" style="width: 18%; background-color: #f24c4c;"></div>
+                    <p class="progress-percentage">18%</p>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="card-icon">
+                        <img src="./image6.png" alt="Compete Icon">
+                    </div>
+                    <h3>Compete here</h3>
+                    <p>Check how your friends are doing</p>
+                    <div class="progress-bar" style="width: 78%; background-color: #56de9c;"></div>
+                    <p class="progress-percentage">78%</p>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="card-icon">
+                        <img src="./image7.png" alt="Voice to Text Icon">
+                    </div>
+                    <h3>Voice to Text</h3>
+                    <p>Click here to record</p>
+                    <div class="progress-bar" style="width: 80%; background-color: #4c8ffb;"></div>
+                    <p class="progress-percentage">80%</p>
+                </div>
+            </div>
+
+            <!-- Tasks Section -->
+            <div class="tasks-section">
+                <h3>Tasks</h3>
+                <ul class="tasks-list" id="tasksList">
+                    <li><input type="checkbox"> Watch Linked List</li>
+                    <li><input type="checkbox"> Revise for Exams</li>
+                    <li><input type="checkbox"> User Testing</li>
+                    <li><input type="checkbox"> Design system</li>
+                    <li><input type="checkbox"> DSA</li>
+                    <li><input type="checkbox"> Marketing dashboard concept</li>
+                </ul>
+
+                <!-- Add new todo input -->
+                <div class="add-todo">
+                    <input type="text" id="newTask" placeholder="Add new todo" />
+                    <button id="addBtn">Add</button>
+                </div>
+            </div>
+
+            <!-- Education Section (within dashboard) -->
+            <div class="education-section">
+                <h3>Education</h3>
+                <div class="education-container">
+                    <!-- Resume Builder -->
+                    <div class="education-card wide">
+                        <h4>Resume Builder</h4>
+                        <button class="small-btn">ATS Score</button>
+                        <button class="small-btn">AI Content</button>
+                        <button class="small-btn">Add Keywords</button>
+                        <button class="small-btn">Templates</button>
+                    </div>
+            
+                    <!-- Daily/Weekly Challenges -->
+                    <div class="education-card wide">
+                        <h4>Daily/Weekly Challenges</h4>
+                        <button class="small-btn yellow">Progress</button>
+                        <button class="small-btn">DSA</button>
+                        <button class="small-btn">Data Science</button>
+                    </div>
+            
+                    <!-- Virtual Teaching Assistant -->
+                    <div class="education-card wide">
+                        <h4>Virtual Teaching Assistant</h4>
+                        <img src="./image12.png" alt="Virtual Teaching Assistant">
+                    </div>
+            
+                    <!-- AI-Generated Code Explanations -->
+                    <div class="education-card">
+                        <h4>AI-Generated Code Explanations</h4>
+                        <img src="./image10.png" alt="AI Code Explanation">
+                    </div>
+            
+                    <!-- Join Your Study Group -->
+                    <div class="education-card">
+                        <h4>Join Your Study Group</h4>
+                        <img src="./image9.png" alt="Study Group">
+                    </div>
+            
+                    <!-- Mentor Matching -->
+                    <div class="education-card">
+                        <h4>Mentor Matching</h4>
+                        <img src="./image11.png" alt="Mentor Matching">
+                    </div>
+            
+                    <!-- Content Summarizer -->
+                    <div class="education-card wide">
+                        <h4>Content Summarizer</h4>
+                        <textarea placeholder="Write your content here..."></textarea>
+                        <button class="action-btn">Start Summarizing</button>
+                        <button class="action-btn">Upload Document</button>
+                    </div>
+            
+                    <!-- Mock Interview Virtual Assistant -->
+                    <div class="education-card">
+                        <h4>Mock Interview Virtual Assistant</h4>
+                        <button class="big-btn">Data Structures</button>
+                        <button class="big-btn">Database Management</button>
+                        <button class="big-btn">Guesstimates & Analytics</button>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+</div>
+
+
+
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-main">
+      <div class="footer-left">
+        <h3>Brainwave.io</h3>
+        <p>Transform Your Learning with AI-Powered Tool</p>
+      </div>
+      <div class="footer-right">
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Help Desk</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">Digital Marketing</a></li>
+            <li><a href="#">Content Writing</a></li>
+            <li><a href="#">SEO for Business</a></li>
+            <li><a href="#">UI Design</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Return Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-social">
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </footer>
+</body>
+</html>
